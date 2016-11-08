@@ -34,7 +34,6 @@ NSString * const SECRET    = kPlatform == YYPushSDKPlatformOnline ? @"6f3efde9fb
                 launchOptions:launchOptions
                      platform:kPlatform];
     
-    [self.window makeKeyAndVisible];
     return YES;
 }
 
