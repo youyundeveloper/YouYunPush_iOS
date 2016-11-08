@@ -173,8 +173,8 @@
       *
       *  @see [[UIApplecation sharedApplecation] unregisterForRemoteNotifications]
       */
+     + (void)unregisterForRemoteNotifications;
     ```
-+ (void)unregisterForRemoteNotifications;
 
 
 ### 2.设置推送时段
