@@ -79,26 +79,25 @@
    其中参数`udid`用来区分设备，需要开发者传入一定规则的非空字符串；参数`unDelegate`用来处理iOS 10新推出的推送。
 
 
-3.  注册通知
+3. 注册通知
 
-    在需要注册通知的地方注册通知。
+   在需要注册通知的地方注册通知。
 
-    ```objective-c
-    [YYPush registerForRemoteNotifications:nil];
-    ```
+   ```objective-c
+   [YYPush registerForRemoteNotifications:nil];
+   ```
 
-    可以监听游云推送通知获取推送是否注册成功。
+   可以监听游云推送通知获取推送是否注册成功。
 
-    ```objective-c
-    /**
+   ```objective-c
+   /**
     * 成功通知
     */
-    extern NSString *const YYNotificationsRegisterSuccess;
-    /**
+   extern NSString *const YYNotificationsRegisterSuccess;
+   /**
     * 失败通知
     */
-    extern NSString *const YYNotificationsRegisterFailed;
-    ```
+   extern NSString *const YYNotificationsRegisterFailed;
    ```
 
    注意⚠️：
@@ -156,29 +155,27 @@
 
 ### 1.取消推送
 
--   取消游云平台的推送
+-  取消游云平台的推送
 
-    开发者可以取消设备在游云平台的推送服务，而且保留APP注册推送的功能。
+   开发者可以取消设备在游云平台的推送服务，而且保留APP注册推送的功能。
 
-    ```objective-c
-    [YYPush deviceUnRegisterPush:^(BOOL isUnRegister, NSError * _Nullable requestError) {
-        }];
-    ```
+   ```objective-c
+   [YYPush deviceUnRegisterPush:^(BOOL isUnRegister, NSError * _Nullable requestError) {
+       }];
+   ```
 
-    block返回调用接口结果及错误信息。
+   block返回调用接口结果及错误信息。
 
--   取消APP注册的推送功能。
+-  取消APP注册的推送功能。
 
-    ```objective-c
-     /**
+   ```objective-c
+   /**
     *  取消UIApplecation注册Notification服务
     *
     *  @see [[UIApplecation sharedApplecation] unregisterForRemoteNotifications]
     */
-    ```
-+ (void)unregisterForRemoteNotifications;
-
-
+   + (void)unregisterForRemoteNotifications;
+   ```
 ### 2.设置推送时段
 
 游云平台提供设置设备推送时段功能
