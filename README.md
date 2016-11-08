@@ -91,15 +91,14 @@
 
     ```objective-c
     /**
-    * 成功通知
-    */
+     * 成功通知
+     */
     extern NSString *const YYNotificationsRegisterSuccess;
     /**
-    * 失败通知
-    */
+     * 失败通知
+     */
     extern NSString *const YYNotificationsRegisterFailed;
     ```
-   ```
 
    注意⚠️：
 
@@ -113,7 +112,6 @@
    NSString *token = [YYPush registerDeviceToken:deviceToken];
    ```
 
-   ​
 
 5. 接收通知
 
@@ -171,10 +169,10 @@
 
     ```objective-c
      /**
-    *  取消UIApplecation注册Notification服务
-    *
-    *  @see [[UIApplecation sharedApplecation] unregisterForRemoteNotifications]
-    */
+      *  取消UIApplecation注册Notification服务
+      *
+      *  @see [[UIApplecation sharedApplecation] unregisterForRemoteNotifications]
+      */
     ```
 + (void)unregisterForRemoteNotifications;
 
