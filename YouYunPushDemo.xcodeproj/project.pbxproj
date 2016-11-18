@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C6562C071DCB3ADB006C5273 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C6562C061DCB3ADB006C5273 /* icon.png */; };
-		C6C466B01DD5A28D00F9142B /* YouYunPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6C466AE1DD5A28500F9142B /* YouYunPush.framework */; };
-		C6C466B11DD5A28D00F9142B /* YouYunPush.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C6C466AE1DD5A28500F9142B /* YouYunPush.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C672EEDD1DDEFABE0043CF92 /* YouYunPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C672EEDB1DDEFA8D0043CF92 /* YouYunPush.framework */; };
+		C672EEDE1DDEFABE0043CF92 /* YouYunPush.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C672EEDB1DDEFA8D0043CF92 /* YouYunPush.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C6D669CD1DCAED15008C4DE3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D669CC1DCAED15008C4DE3 /* main.m */; };
 		C6D669D01DCAED15008C4DE3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D669CF1DCAED15008C4DE3 /* AppDelegate.m */; };
 		C6D669D31DCAED15008C4DE3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D669D21DCAED15008C4DE3 /* ViewController.m */; };
@@ -44,7 +44,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C6C466B11DD5A28D00F9142B /* YouYunPush.framework in Embed Frameworks */,
+				C672EEDE1DDEFABE0043CF92 /* YouYunPush.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,7 +53,7 @@
 
 /* Begin PBXFileReference section */
 		C6562C061DCB3ADB006C5273 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		C6C466AE1DD5A28500F9142B /* YouYunPush.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YouYunPush.framework; sourceTree = "<group>"; };
+		C672EEDB1DDEFA8D0043CF92 /* YouYunPush.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YouYunPush.framework; sourceTree = "<group>"; };
 		C6D669C81DCAED15008C4DE3 /* YouYunPushDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouYunPushDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6D669CC1DCAED15008C4DE3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C6D669CE1DCAED15008C4DE3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6C466B01DD5A28D00F9142B /* YouYunPush.framework in Frameworks */,
+				C672EEDD1DDEFABE0043CF92 /* YouYunPush.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,7 +167,7 @@
 		C6D66A021DCAEE16008C4DE3 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				C6C466AE1DD5A28500F9142B /* YouYunPush.framework */,
+				C672EEDB1DDEFA8D0043CF92 /* YouYunPush.framework */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
