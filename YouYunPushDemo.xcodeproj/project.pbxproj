@@ -8,8 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		C6562C071DCB3ADB006C5273 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C6562C061DCB3ADB006C5273 /* icon.png */; };
-		C672EEDD1DDEFABE0043CF92 /* YouYunPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C672EEDB1DDEFA8D0043CF92 /* YouYunPush.framework */; };
-		C672EEDE1DDEFABE0043CF92 /* YouYunPush.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C672EEDB1DDEFA8D0043CF92 /* YouYunPush.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C66062491DEC32A50041A9C6 /* YouYunPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66062481DEC32A50041A9C6 /* YouYunPush.framework */; };
+		C66814CC1DE2F7D30003D7F0 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66814B21DE2D61C0003D7F0 /* UserNotifications.framework */; };
+		C66814CD1DE2F7D30003D7F0 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66814B41DE2D61C0003D7F0 /* UserNotificationsUI.framework */; };
+		C66814D11DE2F7D30003D7F0 /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66814D01DE2F7D30003D7F0 /* NotificationViewController.m */; };
+		C66814D41DE2F7D30003D7F0 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C66814D21DE2F7D30003D7F0 /* MainInterface.storyboard */; };
+		C66814D81DE2F7D30003D7F0 /* YouYunPushContent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C66814CB1DE2F7D30003D7F0 /* YouYunPushContent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C66814E41DE2F9210003D7F0 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = C66814E31DE2F9210003D7F0 /* NotificationService.m */; };
+		C66814E81DE2F9210003D7F0 /* YouYunPushService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C66814E01DE2F9210003D7F0 /* YouYunPushService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C6D669CD1DCAED15008C4DE3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D669CC1DCAED15008C4DE3 /* main.m */; };
 		C6D669D01DCAED15008C4DE3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D669CF1DCAED15008C4DE3 /* AppDelegate.m */; };
 		C6D669D31DCAED15008C4DE3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D669D21DCAED15008C4DE3 /* ViewController.m */; };
@@ -21,6 +27,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C66814D61DE2F7D30003D7F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6D669C01DCAED15008C4DE3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C66814CA1DE2F7D30003D7F0;
+			remoteInfo = YouYunPushContent;
+		};
+		C66814E61DE2F9210003D7F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6D669C01DCAED15008C4DE3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C66814DF1DE2F9210003D7F0;
+			remoteInfo = YouYunPushService;
+		};
 		C6D669E21DCAED15008C4DE3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C6D669C01DCAED15008C4DE3 /* Project object */;
@@ -38,13 +58,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		C66814C61DE2D61D0003D7F0 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C66814D81DE2F7D30003D7F0 /* YouYunPushContent.appex in Embed App Extensions */,
+				C66814E81DE2F9210003D7F0 /* YouYunPushService.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C6E451B41DCAFB4400B32B74 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C672EEDE1DDEFABE0043CF92 /* YouYunPush.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,7 +84,18 @@
 
 /* Begin PBXFileReference section */
 		C6562C061DCB3ADB006C5273 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		C672EEDB1DDEFA8D0043CF92 /* YouYunPush.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YouYunPush.framework; sourceTree = "<group>"; };
+		C66062481DEC32A50041A9C6 /* YouYunPush.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YouYunPush.framework; sourceTree = "<group>"; };
+		C66814B21DE2D61C0003D7F0 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		C66814B41DE2D61C0003D7F0 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		C66814CB1DE2F7D30003D7F0 /* YouYunPushContent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = YouYunPushContent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C66814CF1DE2F7D30003D7F0 /* NotificationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationViewController.h; sourceTree = "<group>"; };
+		C66814D01DE2F7D30003D7F0 /* NotificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationViewController.m; sourceTree = "<group>"; };
+		C66814D31DE2F7D30003D7F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		C66814D51DE2F7D30003D7F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C66814E01DE2F9210003D7F0 /* YouYunPushService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = YouYunPushService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C66814E21DE2F9210003D7F0 /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
+		C66814E31DE2F9210003D7F0 /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
+		C66814E51DE2F9210003D7F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6D669C81DCAED15008C4DE3 /* YouYunPushDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouYunPushDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6D669CC1DCAED15008C4DE3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C6D669CE1DCAED15008C4DE3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -74,11 +116,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C66814C81DE2F7D30003D7F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C66814CD1DE2F7D30003D7F0 /* UserNotificationsUI.framework in Frameworks */,
+				C66814CC1DE2F7D30003D7F0 /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C66814DD1DE2F9210003D7F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C6D669C51DCAED15008C4DE3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C672EEDD1DDEFABE0043CF92 /* YouYunPush.framework in Frameworks */,
+				C66062491DEC32A50041A9C6 /* YouYunPush.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,12 +157,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C66814B11DE2D61C0003D7F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C66814B21DE2D61C0003D7F0 /* UserNotifications.framework */,
+				C66814B41DE2D61C0003D7F0 /* UserNotificationsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C66814CE1DE2F7D30003D7F0 /* YouYunPushContent */ = {
+			isa = PBXGroup;
+			children = (
+				C66814CF1DE2F7D30003D7F0 /* NotificationViewController.h */,
+				C66814D01DE2F7D30003D7F0 /* NotificationViewController.m */,
+				C66814D21DE2F7D30003D7F0 /* MainInterface.storyboard */,
+				C66814D51DE2F7D30003D7F0 /* Info.plist */,
+			);
+			path = YouYunPushContent;
+			sourceTree = "<group>";
+		};
+		C66814E11DE2F9210003D7F0 /* YouYunPushService */ = {
+			isa = PBXGroup;
+			children = (
+				C66814E21DE2F9210003D7F0 /* NotificationService.h */,
+				C66814E31DE2F9210003D7F0 /* NotificationService.m */,
+				C66814E51DE2F9210003D7F0 /* Info.plist */,
+			);
+			path = YouYunPushService;
+			sourceTree = "<group>";
+		};
 		C6D669BF1DCAED15008C4DE3 = {
 			isa = PBXGroup;
 			children = (
 				C6D669CA1DCAED15008C4DE3 /* YouYunPushDemo */,
 				C6D669E41DCAED15008C4DE3 /* YouYunPushDemoTests */,
 				C6D669EF1DCAED15008C4DE3 /* YouYunPushDemoUITests */,
+				C66814CE1DE2F7D30003D7F0 /* YouYunPushContent */,
+				C66814E11DE2F9210003D7F0 /* YouYunPushService */,
+				C66814B11DE2D61C0003D7F0 /* Frameworks */,
 				C6D669C91DCAED15008C4DE3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -115,6 +206,8 @@
 				C6D669C81DCAED15008C4DE3 /* YouYunPushDemo.app */,
 				C6D669E11DCAED15008C4DE3 /* YouYunPushDemoTests.xctest */,
 				C6D669EC1DCAED15008C4DE3 /* YouYunPushDemoUITests.xctest */,
+				C66814CB1DE2F7D30003D7F0 /* YouYunPushContent.appex */,
+				C66814E01DE2F9210003D7F0 /* YouYunPushService.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,7 +260,7 @@
 		C6D66A021DCAEE16008C4DE3 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				C672EEDB1DDEFA8D0043CF92 /* YouYunPush.framework */,
+				C66062481DEC32A50041A9C6 /* YouYunPush.framework */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -175,6 +268,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C66814CA1DE2F7D30003D7F0 /* YouYunPushContent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C66814D91DE2F7D30003D7F0 /* Build configuration list for PBXNativeTarget "YouYunPushContent" */;
+			buildPhases = (
+				C66814C71DE2F7D30003D7F0 /* Sources */,
+				C66814C81DE2F7D30003D7F0 /* Frameworks */,
+				C66814C91DE2F7D30003D7F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YouYunPushContent;
+			productName = YouYunPushContent;
+			productReference = C66814CB1DE2F7D30003D7F0 /* YouYunPushContent.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		C66814DF1DE2F9210003D7F0 /* YouYunPushService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C66814E91DE2F9210003D7F0 /* Build configuration list for PBXNativeTarget "YouYunPushService" */;
+			buildPhases = (
+				C66814DC1DE2F9210003D7F0 /* Sources */,
+				C66814DD1DE2F9210003D7F0 /* Frameworks */,
+				C66814DE1DE2F9210003D7F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YouYunPushService;
+			productName = YouYunPushService;
+			productReference = C66814E01DE2F9210003D7F0 /* YouYunPushService.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		C6D669C71DCAED15008C4DE3 /* YouYunPushDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C6D669F51DCAED15008C4DE3 /* Build configuration list for PBXNativeTarget "YouYunPushDemo" */;
@@ -183,10 +310,13 @@
 				C6D669C51DCAED15008C4DE3 /* Frameworks */,
 				C6D669C61DCAED15008C4DE3 /* Resources */,
 				C6E451B41DCAFB4400B32B74 /* Embed Frameworks */,
+				C66814C61DE2D61D0003D7F0 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C66814D71DE2F7D30003D7F0 /* PBXTargetDependency */,
+				C66814E71DE2F9210003D7F0 /* PBXTargetDependency */,
 			);
 			name = YouYunPushDemo;
 			productName = YouYunPushDemo;
@@ -238,6 +368,16 @@
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = YouYun;
 				TargetAttributes = {
+					C66814CA1DE2F7D30003D7F0 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 3G36927JA3;
+						ProvisioningStyle = Automatic;
+					};
+					C66814DF1DE2F9210003D7F0 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 3G36927JA3;
+						ProvisioningStyle = Automatic;
+					};
 					C6D669C71DCAED15008C4DE3 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 3G36927JA3;
@@ -276,11 +416,28 @@
 				C6D669C71DCAED15008C4DE3 /* YouYunPushDemo */,
 				C6D669E01DCAED15008C4DE3 /* YouYunPushDemoTests */,
 				C6D669EB1DCAED15008C4DE3 /* YouYunPushDemoUITests */,
+				C66814CA1DE2F7D30003D7F0 /* YouYunPushContent */,
+				C66814DF1DE2F9210003D7F0 /* YouYunPushService */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C66814C91DE2F7D30003D7F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C66814D41DE2F7D30003D7F0 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C66814DE1DE2F9210003D7F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C6D669C61DCAED15008C4DE3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -309,6 +466,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C66814C71DE2F7D30003D7F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C66814D11DE2F7D30003D7F0 /* NotificationViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C66814DC1DE2F9210003D7F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C66814E41DE2F9210003D7F0 /* NotificationService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C6D669C41DCAED15008C4DE3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -338,6 +511,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C66814D71DE2F7D30003D7F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C66814CA1DE2F7D30003D7F0 /* YouYunPushContent */;
+			targetProxy = C66814D61DE2F7D30003D7F0 /* PBXContainerItemProxy */;
+		};
+		C66814E71DE2F9210003D7F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C66814DF1DE2F9210003D7F0 /* YouYunPushService */;
+			targetProxy = C66814E61DE2F9210003D7F0 /* PBXContainerItemProxy */;
+		};
 		C6D669E31DCAED15008C4DE3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C6D669C71DCAED15008C4DE3 /* YouYunPushDemo */;
@@ -351,6 +534,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		C66814D21DE2F7D30003D7F0 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C66814D31DE2F7D30003D7F0 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		C6D669D41DCAED15008C4DE3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -370,6 +561,58 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C66814DA1DE2F7D30003D7F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 3G36927JA3;
+				INFOPLIST_FILE = YouYunPushContent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shihui.SHPushSDKDemo.YouYunPushContent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C66814DB1DE2F7D30003D7F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 3G36927JA3;
+				INFOPLIST_FILE = YouYunPushContent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shihui.SHPushSDKDemo.YouYunPushContent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C66814EA1DE2F9210003D7F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 3G36927JA3;
+				INFOPLIST_FILE = YouYunPushService/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shihui.SHPushSDKDemo.YouYunPushService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C66814EB1DE2F9210003D7F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 3G36927JA3;
+				INFOPLIST_FILE = YouYunPushService/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shihui.SHPushSDKDemo.YouYunPushService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		C6D669F31DCAED15008C4DE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -465,11 +708,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = YouYunPushDemo/YouYunPushDemo.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 3G36927JA3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/YouYunPushDemo/Vendor",
-					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = YouYunPushDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -484,11 +727,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = YouYunPushDemo/YouYunPushDemo.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 3G36927JA3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/YouYunPushDemo/Vendor",
-					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = YouYunPushDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -547,6 +790,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C66814D91DE2F7D30003D7F0 /* Build configuration list for PBXNativeTarget "YouYunPushContent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C66814DA1DE2F7D30003D7F0 /* Debug */,
+				C66814DB1DE2F7D30003D7F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C66814E91DE2F9210003D7F0 /* Build configuration list for PBXNativeTarget "YouYunPushService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C66814EA1DE2F9210003D7F0 /* Debug */,
+				C66814EB1DE2F9210003D7F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C6D669C31DCAED15008C4DE3 /* Build configuration list for PBXProject "YouYunPushDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

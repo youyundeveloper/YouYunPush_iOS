@@ -38,7 +38,7 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:YYNotificationsRegisterSuccess object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,11 +51,13 @@
     NSString *categaryID = @"category1";
     NSString *action1ID = @"action1";
     NSString *action2ID = @"action2";
+    NSString *action3ID = @"action3";
     if ([UIDevice currentDevice].systemVersion.floatValue > 10.0) {
         //iOS10特有
         UNNotificationAction *action1 = [UNNotificationAction actionWithIdentifier:action1ID title:@"确定" options:UNNotificationActionOptionForeground];
         UNNotificationAction *action2 = [UNNotificationAction actionWithIdentifier:action2ID title:@"取消" options:UNNotificationActionOptionDestructive];
-        UNNotificationCategory *categary = [UNNotificationCategory categoryWithIdentifier:categaryID actions:@[action1,  action2] intentIdentifiers:@[] options:UNNotificationCategoryOptionCustomDismissAction];
+        UNNotificationAction *action3 = [UNTextInputNotificationAction actionWithIdentifier:action3ID title:@"反馈" options:UNNotificationActionOptionForeground textInputButtonTitle:@"确定" textInputPlaceholder:@"输入您的反馈意见"];
+        UNNotificationCategory *categary = [UNNotificationCategory categoryWithIdentifier:categaryID actions:@[action1,  action2, action3] intentIdentifiers:@[] options:UNNotificationCategoryOptionCustomDismissAction];
         set = [NSSet setWithObject:categary];
     } else {
         UIMutableUserNotificationCategory *categary = [[UIMutableUserNotificationCategory alloc] init];

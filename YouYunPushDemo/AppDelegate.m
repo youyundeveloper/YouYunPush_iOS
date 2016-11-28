@@ -11,7 +11,7 @@
 #import <YouYunPush/YouYunPush.h>
 
 
-NSInteger const kPlatform = YYPushSDKPlatformDevelop;
+NSInteger const kPlatform = YYPushSDKPlatformOnline;
 
 NSString * const CLIENT_ID = kPlatform == YYPushSDKPlatformOnline ? @"1-20525-4ab3a7c3ddb665945d0074f51e979ef0-ios" : @"1-20142-2e563db99a8ca41df48973b0c43ea50a-ios";
 NSString * const SECRET    = kPlatform == YYPushSDKPlatformOnline ? @"6f3efde9fb49a76ff6bfb257f74f4d5b" : @"ace518dab1fde58eacb126df6521d34c";
@@ -113,6 +113,10 @@ NSString * const SECRET    = kPlatform == YYPushSDKPlatformOnline ? @"6f3efde9fb
         NSDictionary *userInfo = response.notification.request.content.userInfo;
         [YYPush didReceiveRemoteNotification:userInfo];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"YYDidReceiveNotification" object:userInfo];
+        NSLog(@"actions:%@", response.actionIdentifier);
+        if ([response.actionIdentifier isEqualToString:@"action3"]) {
+            NSLog(@"input actions:%@", ((UNTextInputNotificationResponse*)response).userText);
+        }
     }
     completionHandler();
 }
