@@ -17,7 +17,7 @@ NSString * const CLIENT_ID = kPlatform == YYPushSDKPlatformOnline ? @"1-20525-4a
 NSString * const SECRET    = kPlatform == YYPushSDKPlatformOnline ? @"6f3efde9fb49a76ff6bfb257f74f4d5b" : @"ace518dab1fde58eacb126df6521d34c";
 
 
-@interface AppDelegate ()<UNUserNotificationCenterDelegate>
+@interface AppDelegate ()<UNUserNotificationCenterDelegate, YouYunPushDelegate>
 
 
 @end
@@ -33,6 +33,8 @@ NSString * const SECRET    = kPlatform == YYPushSDKPlatformOnline ? @"6f3efde9fb
                    UNDelegate:self
                 launchOptions:launchOptions
                      platform:kPlatform];
+    
+    [YYPush registerYouYunDelegate:self];
     
     return YES;
 }
@@ -119,6 +121,16 @@ NSString * const SECRET    = kPlatform == YYPushSDKPlatformOnline ? @"6f3efde9fb
         }
     }
     completionHandler();
+}
+
+#pragma mark - YouYunPushDelegate
+
+- (void)youyunPushSuccessWithData:(NSDictionary *)data {
+    NSLog(@"【游云】userID:%@", data[kYYDelegateSuccessDataUserID]);
+}
+
+- (void)youyunPushFailedWithError:(NSError *)error {
+    NSLog(@"【游云】Error:%@", error);
 }
 
 @end

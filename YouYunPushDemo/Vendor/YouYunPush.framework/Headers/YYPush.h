@@ -32,6 +32,28 @@ typedef NS_ENUM(NSInteger, YYPushSDKPatform) {
 extern NSString *const YYNotificationsRegisterSuccess;
 extern NSString *const YYNotificationsRegisterFailed;
 
+/// 游云推送注册成功返回的用户信息key
+extern NSString *const kYYDelegateSuccessDataUserID;
+
+/// 游云推送状态回调
+@protocol YouYunPushDelegate <NSObject>
+
+/**
+ 注册推送成功，返回用户信息
+
+ @param data 用户的信息
+ */
+- (void)youyunPushSuccessWithData:(NSDictionary *)data;
+
+/**
+ 注册推送失败，失败原因
+
+ @param error 失败原因
+ */
+- (void)youyunPushFailedWithError:(NSError *)error;
+
+@end
+
 
 /**
  *  游云推送主体功能
@@ -55,6 +77,8 @@ extern NSString *const YYNotificationsRegisterFailed;
                UNDelegate:(nullable id <UNUserNotificationCenterDelegate>)delegate
             launchOptions:(nullable NSDictionary *)launchOptions
                  platform:(YYPushSDKPatform)platform;
+
++ (void)registerYouYunDelegate:(id<YouYunPushDelegate>)delegate;
 
 /** 
  *  注册RemoteNotification的类型，默认推送时段0~24
