@@ -79,9 +79,9 @@
    其中参数`udid`用来区分设备，需要开发者传入一定规则的非空字符串；参数`unDelegate`用来处理iOS 10新推出的推送。
 
 
-3.  注册通知
+3.  注册通知/设置代理
 
-    在需要注册通知的地方注册通知。
+    1. 在需要注册通知的地方注册通知。
 
     ```objective-c
     [YYPush registerForRemoteNotifications:nil];
@@ -100,7 +100,17 @@
     extern NSString *const YYNotificationsRegisterFailed;
     ```
 
-   注意⚠️：
+    2.在需要获取注册推送结果的地方设置代理。
+
+    ```objective-c
+    [YYPush registerYouYunDelegate:self];
+    ```
+
+    ​
+
+
+
+注意⚠️：
 
    ​    此方法通用`iOS8.0及以上`系统，由于现在游云后台不支持推送交互，参数传空。
 
@@ -154,18 +164,19 @@
 
 ### 1.取消推送
 
--   取消游云平台的推送
+-    取消游云平台的推送
 
-    开发者可以取消设备在游云平台的推送服务，而且保留APP注册推送的功能。
+     开发者可以取消设备在游云平台的推送服务，而且保留APP注册推送的功能。
 
-    ```objective-c
-    [YYPush deviceUnRegisterPush:^(BOOL isUnRegister, NSError * _Nullable requestError) {
-        }];
-    ```
+     ```objective-c
+     [YYPush deviceUnRegisterPush:^(BOOL isUnRegister, NSError * _Nullable requestError) {
+         }];
+     ```
 
-    block返回调用接口结果及错误信息。
+     block返回调用接口结果及错误信息。
 
--   取消APP注册的推送功能。
+-    取消APP注册的推送功能。
+
 
     ```objective-c
      /**
@@ -175,6 +186,7 @@
       */
      + (void)unregisterForRemoteNotifications;
     ```
+
 
 
 ### 2.设置推送时段
@@ -225,3 +237,6 @@
 + (nullable NSString *)getUserID;
 ```
 
+## 5. 注意事项
+
+因为`YouYunPush.framework`是动态库，在提交iTunesConnect的时候如果包含`[x86_64][i386]`架构的版本时候会提示`ERROR ITMS-90087`错误信息。解决方案是使用不包含`[x86_64][i386]`架构的库文件。

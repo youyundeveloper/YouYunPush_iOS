@@ -11,10 +11,10 @@
 #import <YouYunPush/YouYunPush.h>
 
 
-NSInteger const kPlatform = YYPushSDKPlatformOnline;
+NSInteger const kPlatform = YYPushSDKPlatformDevelop;
 
-NSString * const CLIENT_ID = kPlatform == YYPushSDKPlatformOnline ? @"1-20525-4ab3a7c3ddb665945d0074f51e979ef0-ios" : @"1-20142-2e563db99a8ca41df48973b0c43ea50a-ios";
-NSString * const SECRET    = kPlatform == YYPushSDKPlatformOnline ? @"6f3efde9fb49a76ff6bfb257f74f4d5b" : @"ace518dab1fde58eacb126df6521d34c";
+NSString * const CLIENT_ID = kPlatform == YYPushSDKPlatformOnline ? @"1-20525-4ab3a7c3ddb665945d0074f51e979ef0-ios" : @"1-20115-b4fe7681dff0100a32c6af6331c85202-ios";
+NSString * const SECRET    = kPlatform == YYPushSDKPlatformOnline ? @"6f3efde9fb49a76ff6bfb257f74f4d5b" : @"9177e74df234d03b31fd8a48ea54a7fc";
 
 
 @interface AppDelegate ()<UNUserNotificationCenterDelegate, YouYunPushDelegate>

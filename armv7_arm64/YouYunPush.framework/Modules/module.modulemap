@@ -1,0 +1,6 @@
+framework module YouYunPush {
+  umbrella header "YouYunPush.h"
+
+  export *
+  module * { export * }
+}
